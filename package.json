@@ -1,0 +1,147 @@
+{
+  "name": "starlinkai",
+  "productName": "StarlinkAI",
+  "version": "0.1.25",
+  "description": "StarlinkAI, an independent local-first AI workspace for developers",
+  "main": "./out/main/index.js",
+  "type": "module",
+  "author": "Independent contributors",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "postinstall": "node scripts/install-electron.mjs",
+    "setup:desktop": "node scripts/install-electron.mjs",
+    "dev:ui": "vite --config scripts/workspace-preview.vite.ts",
+    "test:collaboration": "node --experimental-transform-types scripts/collaboration-model-test.mjs",
+    "test:runtime": "node scripts/runtime-test.mjs",
+    "test:chat": "node scripts/chat-regression-test.mjs && node scripts/batched-storage-test.mjs",
+    "test:workspace-database": "node scripts/workspace-database-test.mjs",
+    "test:capacity": "node scripts/desktop-capacity-test.mjs",
+    "test:provider-interaction": "node scripts/provider-interaction-test.mjs",
+    "test:migration": "node scripts/desktop-migration-test.mjs",
+    "test:storage-upgrade": "node scripts/desktop-storage-upgrade-test.mjs",
+    "test:streaming": "node scripts/desktop-streaming-test.mjs",
+    "test:onboarding": "node scripts/onboarding-interaction-test.mjs",
+    "test:portable": "node scripts/portable-archive-test.mjs && node scripts/portable-backup-service-test.mjs && node scripts/portable-backup-ui-test.mjs",
+    "test:portable-desktop": "node scripts/portable-backup-interaction-test.mjs",
+    "test:portable-upgrade": "node scripts/portable-backup-upgrade-test.mjs",
+    "test:cancellation": "node scripts/provider-cancel-live-test.mjs --self-test",
+    "test:projects": "node scripts/project-regression-test.mjs",
+    "test:coordination-live": "node scripts/coordination-live-test.mjs",
+    "test:core": "node scripts/core-coordination-test.mjs",
+    "test:butler": "node scripts/butler-test.mjs",
+    "test:butler-live": "node scripts/coordination-live-test.mjs --managed",
+    "test:overall": "node scripts/overall-regression-test.mjs",
+    "test:assistant": "node scripts/assistant-test.mjs",
+    "test:permissions": "node scripts/permission-adapter-test.mjs && node scripts/permission-runtime-test.mjs && node scripts/acp-receipt-test.mjs && npm run test:cancellation",
+    "test:tool-display": "node scripts/tool-display-test.mjs",
+    "test:efficiency": "node scripts/efficiency-test.mjs",
+    "typecheck": "tsc --noEmit -p tsconfig.node.json && tsc --noEmit -p tsconfig.web.json",
+    "check": "npm run typecheck && npm run test:collaboration && npm run test:runtime && npm run test:chat && npm run test:projects && npm run test:core && npm run test:butler && npm run test:overall && npm run test:assistant && npm run test:permissions && npm run test:tool-display && npm run test:efficiency && npm run test:security && npm run test:desktop-state && npm run test:portable && npm run test:relink && npm run build",
+    "dev": "electron-vite dev",
+    "test:acp-regression": "node --experimental-transform-types scripts/acp-regression-test.mjs",
+    "test:task-execution": "node --experimental-transform-types scripts/task-execution-test.mjs",
+    "test:functional": "node scripts/functional-test.mjs",
+    "test:ui": "node scripts/ui-test.mjs",
+    "test:pets": "node scripts/test-pets.mjs",
+    "test:desktop": "node scripts/desktop-smoke.mjs",
+    "test:package": "node scripts/package-smoke.cjs",
+    "test:security": "node scripts/security-regression-test.mjs && node scripts/desktop-security-test.mjs && node scripts/provider-security-test.mjs",
+    "test:desktop-state": "node scripts/desktop-state-test.mjs && node scripts/workspace-lifecycle-test.mjs",
+    "test:interaction": "node scripts/desktop-interaction-test.mjs",
+    "test:recovery": "node scripts/desktop-recovery-test.mjs",
+    "build": "electron-vite build",
+    "preview": "electron-vite preview",
+    "pack": "npm run build && electron-builder --dir",
+    "dist": "npm run build && electron-builder --win",
+    "test:relink": "node scripts/project-relink-test.mjs && node scripts/managed-assets-test.mjs && node scripts/project-relink-security-test.mjs",
+    "test:relink-desktop": "node scripts/project-relink-interaction-test.mjs --mode acceptance",
+    "test:build-dependencies": "node scripts/build-dependencies-test.mjs",
+    "test:managed-upgrade": "node scripts/managed-assets-upgrade-test.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/claude-agent-sdk": "^0.3.273",
+    "@electron-toolkit/preload": "^3.0.2",
+    "@electron-toolkit/utils": "^4.0.0",
+    "@fontsource-variable/inter": "^5.2.8",
+    "@fontsource/jetbrains-mono": "^5.2.8",
+    "@google/gemini-cli": "^0.60.0",
+    "@rive-app/react-webgl2": "^4.32.1",
+    "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
+    "lucide-react": "^0.544.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-markdown": "^10.1.0",
+    "rehype-sanitize": "^6.0.0",
+    "remark-gfm": "^4.0.1",
+    "yauzl": "3.4.0",
+    "yazl": "3.3.1",
+    "zustand": "^5.0.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.13",
+    "@types/node": "^24.5.2",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "@types/yauzl": "3.4.0",
+    "@types/yazl": "3.3.1",
+    "@vitejs/plugin-react": "^5.0.3",
+    "electron": "44.7.0",
+    "electron-builder": "^26.0.12",
+    "electron-vite": "^4.0.1",
+    "tailwindcss": "^4.1.13",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.7"
+  },
+  "build": {
+    "appId": "ai.starlinkai.desktop",
+    "productName": "StarlinkAI",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "out/main/**",
+      "out/preload/**",
+      "out/renderer/**",
+      "resources/icon.png",
+      "resources/pets/*.png",
+      "resources/pets/RIVE.md"
+    ],
+    "asarUnpack": [
+      "node_modules/@anthropic-ai/claude-agent-sdk*/**",
+      "node_modules/@google/gemini-cli/**",
+      "node_modules/@lydell/node-pty*/**",
+      "**/node_modules/node-pty/**"
+    ],
+    "win": {
+      "icon": "resources/icon.png",
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "nsis": {
+      "artifactName": "${productName} Setup ${version}.${ext}",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "portable": {
+      "artifactName": "${productName} Portable ${version}.${ext}"
+    }
+  },
+  "overrides": {
+    "@google/gemini-cli": {
+      "node-pty": "npm:@lydell/node-pty@1.1.0"
+    }
+  },
+  "allowScripts": {
+    "esbuild@0.25.12": true,
+    "esbuild@0.28.2": true,
+    "@github/keytar@7.10.6": true,
+    "electron-winstaller@5.4.0": true,
+    "fsevents@2.3.3": false
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "at": "2026-08-30T12:51:13.114Z",
+  "results": [
+    {
+      "name": "app ready",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "shell layout",
+      "ok": true,
+      "detail": "sidebar=306px threads=89 projects=2 recents=4 connected=true"
+    },
+    {
+      "name": "open thread keeps sidebar",
+      "ok": true,
+      "detail": "width=306 messages=3"
+    },
+    {
+      "name": "focus project keeps sidebar",
+      "ok": true,
+      "detail": "width=306"
+    },
+    {
+      "name": "command palette open/close",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "settings modal open/close",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "right pane tabs",
+      "ok": true,
+      "detail": "审查 / 文件 / 计划 / 终端"
+    },
+    {
+      "name": "sidebar toggle restore",
+      "ok": true,
+      "detail": "collapsed=48px restored=306px"
+    },
+    {
+      "name": "new thread empty state",
+      "ok": true,
+      "detail": "我们要做什么？"
+    },
+    {
+      "name": "generated file tree refresh",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "composer chips",
+      "ok": true,
+      "detail": "本地 | Grok 4.6 | High | 完全访问"
+    },
+    {
+      "name": "send ping",
+      "ok": true,
+      "detail": "messages 0->3 last=assistant:\"pong\""
+    },
+    {
+      "name": "keyboard Ctrl+K / Esc",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "test session cleanup",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "tree test cleanup",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

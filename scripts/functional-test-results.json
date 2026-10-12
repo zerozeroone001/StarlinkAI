@@ -1,0 +1,80 @@
+{
+  "at": "2026-08-30T12:48:50.386Z",
+  "results": [
+    {
+      "name": "grok binary exists",
+      "ok": true,
+      "detail": "C:\\Users\\Administrator\\.grok\\bin\\grok.exe"
+    },
+    {
+      "name": "auth.json readable",
+      "ok": true,
+      "detail": "oz***@gmail.com"
+    },
+    {
+      "name": "session index",
+      "ok": true,
+      "detail": "89 threads, 56 projects"
+    },
+    {
+      "name": "history parse",
+      "ok": true,
+      "detail": "287 lines, 3 user, 57 assistant, 163 tools"
+    },
+    {
+      "name": "git status",
+      "ok": true,
+      "detail": "project is not a git repository — review pane uses its empty state"
+    },
+    {
+      "name": "project tree",
+      "ok": true,
+      "detail": "16 top-level entries"
+    },
+    {
+      "name": "diff parser",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "acp initialize",
+      "ok": true,
+      "detail": "loadSession=true resume=true version=1.0.13"
+    },
+    {
+      "name": "acp authenticate",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "session/new",
+      "ok": true,
+      "detail": "01a052b7…"
+    },
+    {
+      "name": "session/prompt ping",
+      "ok": true,
+      "detail": "stop=end_turn text=\"pong\""
+    },
+    {
+      "name": "session/load without mcpServers",
+      "ok": true,
+      "detail": "correctly rejected"
+    },
+    {
+      "name": "session/load with mcpServers",
+      "ok": true,
+      "detail": "019ff6c8…"
+    },
+    {
+      "name": "session/resume",
+      "ok": true,
+      "detail": "019ff6c8…"
+    },
+    {
+      "name": "session/set_mode worktree",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+.assistant-title-actions {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 6px;
+}
+.workspace-nav-toggle { flex: 0 0 auto; }
+.assistant-due-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  font-size: 12px;
+}
+.assistant-due-banner > svg { flex: 0 0 auto; }
+.assistant-due-banner > span { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.assistant-due-banner > button { flex: 0 0 auto; }
+.assistant-conversation-mode {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.assistant-conversation-mode button {
+  min-width: 43px;
+  height: 27px;
+  padding: 0 8px;
+  background: transparent;
+  border: 0;
+  color: var(--text-3);
+  font: inherit;
+  cursor: pointer;
+}
+.assistant-conversation-mode button[aria-pressed='true'] {
+  background: var(--bg-hover);
+  color: var(--text);
+}
+.assistant-conversation-mode button:disabled { cursor: default; opacity: 0.6; }
+@media (max-width: 640px) {
+  .app-shell.workspace-shell .collab-main .workspace-titlebar { padding: 0 10px; gap: 8px; }
+  .app-shell.workspace-shell .workspace-titlebar > div:first-child { flex: 1; overflow: hidden; }
+  .app-shell.workspace-shell .workspace-titlebar > div:first-child > span,
+  .app-shell.workspace-shell .workspace-titlebar > div:first-child > svg,
+  .app-shell.workspace-shell .workspace-titlebar > div:first-child > .text-button { display: none; }
+  .app-shell.workspace-shell .workspace-titlebar strong { min-width: 0; max-width: none; flex: 1; }
+}
+@media (max-width: 520px) {
+  .assistant-due-banner { padding: 8px 10px; }
+  .team-composer .composer-bottom { flex-wrap: wrap; }
+  .team-composer .composer-bottom > label { max-width: 160px; min-width: 0; }
+  .team-composer .composer-bottom > label select { max-width: 125px; }
+}

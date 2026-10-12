@@ -1,0 +1,16 @@
+.grok-desktop/
+docs
+node_modules
+.tmp/
+out
+dist
+release
+.DS_Store
+*.log
+.env
+.env.local
+.idea
+.vscode
+*.tsbuildinfo
+resources/screenshot*.png
+resources/acp-*

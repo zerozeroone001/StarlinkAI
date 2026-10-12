@@ -1,0 +1,12 @@
+.provider-application-scope {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin: 16px 0 0;
+}
+.provider-application-scope legend { color: var(--text-2); font-size: 12px; padding: 0 6px; }
+.provider-application-scope label { display: flex; align-items: center; gap: 8px; font-size: 14px; }
+.provider-application-scope label:has(input:disabled) { color: var(--text-3); }
+.provider-application-scope p { margin: 7px 0 16px 24px; font-size: 12px; color: var(--text-3); line-height: 1.7; }
+.provider-application-scope p[role="note"] { color: var(--ws-peach, #c89476); }
+.provider-application-scope p:last-child { margin-bottom: 0; }

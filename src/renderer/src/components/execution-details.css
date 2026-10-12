@@ -1,0 +1,21 @@
+.execution-details { margin-top: 8px; min-width: 0; }
+.execution-details > .permission-message { margin-bottom: 10px; }
+.execution-history > summary { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; padding: 6px 0; cursor: pointer; list-style: none; color: var(--text-3); font-size: 12px; }
+.execution-history > summary::-webkit-details-marker { display: none; }
+.execution-history > summary:hover { color: var(--text); }
+.execution-chevron { transition: transform 120ms; flex-shrink: 0; }
+.execution-history[open] > summary .execution-chevron { transform: rotate(90deg); }
+.execution-history-content { border-left: 1px solid var(--border); margin: 4px 0 8px 6px; padding-left: 12px; }
+.execution-tool { min-width: 0; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 12px; }
+.execution-tool > summary { cursor: pointer; display: flex; gap: 8px; align-items: baseline; min-width: 0; color: var(--text-3); }
+.execution-tool > summary > svg { flex-shrink: 0; align-self: center; }
+.execution-tool > summary > span:not(.execution-tool-state), .execution-tool > summary > code { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.execution-tool-state { margin-left: auto; white-space: nowrap; flex-shrink: 0; font-size: 11px; }
+.execution-tool-raw, .execution-tool > pre { margin: 8px 0 0 20px; }
+.execution-tool pre { white-space: pre-wrap; overflow-wrap: anywhere; max-height: 280px; overflow-y: auto; font-size: 11px; padding: 10px; background: var(--bg-elevated); border-radius: 6px; }
+.execution-tool-raw p { color: var(--text-3); overflow-wrap: anywhere; }
+.execution-warning { color: var(--amber, #d9a65b); display: inline-flex; align-items: center; gap: 4px; }
+.execution-command-failed > summary { color: var(--amber, #d9a65b); }
+.execution-file { display: flex; gap: 8px; align-items: baseline; padding: 6px 0; color: var(--text-3); font-size: 12px; overflow-wrap: anywhere; }
+.execution-file > svg { flex-shrink: 0; }
+.tool-activity-group { margin: 0 0 12px 46px; min-width: 0; }
